@@ -18,6 +18,19 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @phone {
+      width: 100%;
+      border: 2px solid red;
+      .blast {
+        width: 88%;
+      }
+      .sky {
+        display: none;
+      }
+      .launch{
+        display: none;
+      }
+    }
 
     img {
       width: 28%;
@@ -45,6 +58,11 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @phone {
+      flex-direction: column-reverse;
+      padding: 0 15px;
+      align-items: flex-start;
+    }
 
     .walk-text {
       width: 50%;
@@ -58,7 +76,15 @@
       }
 
       .btn {
-      }
+        .btn-mix(@btn-bg-color, 30%);
+        font-size: 2rem;
+        text-align: center;
+        color: white;
+        border-radius: 6px;
+        padding: 2% 2%;
+        border: 2px solid red;
+        .my-hover-mixen();
+
     }
 
     .walk-img {
@@ -72,4 +98,7 @@
       }
     }
   }
-}// home
+}
+}
+
+// home
